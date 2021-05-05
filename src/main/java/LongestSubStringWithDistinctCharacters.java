@@ -16,11 +16,12 @@ public class LongestSubStringWithDistinctCharacters {
                 hs.add(s.charAt(i));
             }else{
                 res=Math.max(res,hs.size());
-//                hs.remove(s.charAt(start));
-//                hs.add(s.charAt(i));
+                hs.remove(s.charAt(start));
+                hs.add(s.charAt(i));
                 start++;
             }
         }
+        res=Math.max(res,hs.size());
         return res;
     }
 }
